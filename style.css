@@ -1,0 +1,113 @@
+.hanoi {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 800px;
+    width: 600px;
+    background-color: lightsalmon;
+    position: relative;
+}
+
+.tower {
+    position: relative;
+    cursor:pointer;
+}
+.tower:hover{
+    background:rgb(215, 91, 41);
+}
+
+.tower::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 250px;
+    bottom: 0;
+    left: 90px;
+    background-color: black;
+    border-radius: 10px 10px 0 0;
+}
+
+.disk {
+    position: absolute;
+    background-color: rgb(40, 141, 27);
+    height: 35px;
+    width: 180px;
+    border-radius: 15px;
+    margin-left: 10px;
+    z-index:2;
+    transition: left .2s, bottom .2s .2s;
+    pointer-events: none;
+}
+.d1{ width: 60px; margin-left: 70px;}
+.d2{ width: 90px; margin-left: 55px;}
+.d3{ width: 120px; margin-left: 40px;}
+.d4{ width: 150px; margin-left: 25px;}
+
+
+
+
+.t1 {
+  left: 0;
+}
+
+.t2 {
+    left: 200px;
+}
+
+.t3 {
+    left: 400px;
+}
+.p1{bottom: 0;}
+.p2{bottom: 35px;}
+.p3{bottom: 70px;}
+.p4{bottom: 105px;}
+.p5{bottom: 140px;}
+
+.p0{bottom:350px;}
+
+#bt_restart{
+    margin-top: 50px;
+    margin-left:200px;
+    border: solid 1px blue;
+    border-radius: 20px;
+    color: blue;
+    background-color:cadetblue;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+#bt_restart:hover{
+    background:blue;
+    color:cadetblue;
+    transform: scale(1.2)
+}
+
+#bt_solution{
+    margin-top: 50px;
+    margin-left:200px;
+    border: solid 1px rgb(255, 106, 0);
+    border-radius: 20px;
+    color: rgb(255, 102, 0);
+    background-color:rgb(13, 117, 121);
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+#bt_solution:hover{
+    background:rgb(255, 106, 0);
+    color:rgb(13, 117, 121);
+    transform: scale(1.2)
+}
+
+#bt_size{
+    margin-left: 8px;
+    border: solid 1px rgb(255, 106, 0);
+    border-radius: 10px;
+    color: rgb(255, 102, 0);
+    background-color:rgb(13, 117, 121);
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+#bt_size{
+    background:rgb(255, 106, 0);
+    color:rgb(13, 117, 121);
+    transform: scale(1.2)
+}
